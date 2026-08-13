@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethel | Comms</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+        label { color: var(--gold-shine); font-size: 13px; letter-spacing: 1px; }
+        input, textarea {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            padding: 14px;
+            color: var(--text-bright);
+            border-radius: var(--radius-sm);
+            outline: none;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color var(--trans-fast);
+        }
+        input:focus, textarea:focus { border-color: var(--gold-shine); box-shadow: 0 0 10px var(--gold-glow); }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">AETHEL</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Status</a>
+            <a href="services.html">Payload</a>
+            <a href="gallery.html">Archive</a>
+            <a href="contact.html" class="active">Comms</a>
+        </div>
+    </nav>
+
+    <main class="page-container" style="max-width: 600px;">
+        <h2>Establish Comms</h2>
+        <form id="commsForm">
+            <div class="form-group">
+                <label for="agent">Agent Identifier</label>
+                <input type="text" id="agent" required>
+            </div>
+            <div class="form-group">
+                <label for="frequency">Secure Frequency (Email)</label>
+                <input type="email" id="frequency" required>
+            </div>
+            <div class="form-group">
+                <label for="transmission">Transmission Data</label>
+                <textarea id="transmission" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="stellar-btn" style="width: 100%;">Transmit Signal</button>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2077 AETHEL INDUSTRIES. ALL RIGHTS RESERVED.
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

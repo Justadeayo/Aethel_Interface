@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethel | Mission Archive</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .img-placeholder {
+            background: #161f2e; height: 180px; border-radius: var(--radius-sm);
+            border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center;
+            color: var(--gold-accent); font-size: 12px; letter-spacing: 2px;
+            transition: all var(--trans-fast); overflow: hidden;
+        }
+        .img-placeholder:hover { transform: scale(1.03); border-color: var(--gold-shine); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">AETHEL</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Status</a>
+            <a href="services.html">Payload</a>
+            <a href="gallery.html" class="active">Archive</a>
+            <a href="contact.html">Comms</a>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <h2>Mission Archive</h2>
+        <div class="img-grid">
+            <div class="img-placeholder">SECTOR 01</div>
+            <div class="img-placeholder">SECTOR 02</div>
+            <div class="img-placeholder">SECTOR 03</div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2077 AETHEL INDUSTRIES. ALL RIGHTS RESERVED.
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

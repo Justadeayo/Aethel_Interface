@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethel | System Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">AETHEL</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html" class="active">Status</a>
+            <a href="services.html">Payload</a>
+            <a href="gallery.html">Archive</a>
+            <a href="contact.html">Comms</a>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <h2>Orbital Telemetry</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            
+            <article class="st-card">
+                <h3>System Integrity</h3>
+                <p style="font-size: 48px; color: var(--gold-shine); font-weight: bold;" id="stat1">99.98%</p>
+                <p>Nominal operational parameters maintained.</p>
+            </article>
+            <article class="st-card">
+                <h3>Active Relays</h3>
+                <p style="font-size: 48px; color: var(--gold-shine); font-weight: bold;" id="stat2">254</p>
+                <p>Global communication nodes online.</p>
+            </article>
+            <article class="st-card">
+                <h3>Encryption Protocol</h3>
+                <p style="font-size: 32px; color: var(--gold-shine); font-weight: bold; margin-top: 16px;" id="stat3">QUANTUM-AES</p>
+                <p>Latest security matrix engaged.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2077 AETHEL INDUSTRIES. ALL RIGHTS RESERVED.
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

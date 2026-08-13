@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethel | Celestial Interface</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* Specific Hero Styles */
+        .hero {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; flex: 1; padding: 0 20px;
+            background: radial-gradient(circle at center, #1a2534 0%, var(--bg-deep) 70%);
+        }
+        .hero h1 { font-size: 60px; margin-bottom: 15px; text-shadow: 0 0 20px rgba(255,215,0,0.3); }
+        .hero p { font-size: 20px; color: var(--text-bright); max-width: 700px; margin-bottom: 50px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">AETHEL</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="dashboard.html">Status</a>
+            <a href="services.html">Payload</a>
+            <a href="gallery.html">Archive</a>
+            <a href="contact.html">Comms</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Celestial Operations</h1>
+        <p>Secure, high-velocity interface architecture. Engineered for precision, styled in the colors of the cosmos.</p>
+        
+        <button class="stellar-btn" id="actionBtn">Initialize Sequence</button>
+    </header>
+
+    <footer>
+        &copy; 2077 AETHEL INDUSTRIES. ALL RIGHTS RESERVED.
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>

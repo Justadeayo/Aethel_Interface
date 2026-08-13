@@ -1,0 +1,201 @@
+:root {
+    --bg-deep: #05070a;   
+    --bg-card: #0b1017;      
+    --bg-hover: #121b27;
+    
+    --gold-shine: #ffd700;   
+    --gold-accent: #aa8c2c;   
+    --gold-glow: rgba(255, 215, 0, 0.15); 
+    
+    --text-dim: #8b9bb4;   
+    --text-bright: #e0e6ed;
+    --border-subtle: rgba(170, 140, 44, 0.2);
+    --radius-sm: 8px;
+    --radius-lg: 16px;
+    --trans-fast: 0.3s ease;
+    --ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-dim);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: 0;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--bg-card); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold-accent); }
+
+nav {
+    background: rgba(11, 16, 23, 0.85); /* Translucent dark navy */
+    backdrop-filter: blur(10px);         /* Frosted glass effect */
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    color: var(--gold-shine);
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, var(--gold-accent), var(--gold-shine), var(--gold-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform var(--trans-fast);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px; 
+}
+
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    transition: all var(--trans-fast);
+    position: relative;
+}
+
+
+.nav-links a:hover {
+    color: var(--gold-shine);
+    background: rgba(255, 215, 0, 0.05);
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.nav-links a.active {
+    color: var(--bg-deep);
+    background: var(--gold-shine);
+    box-shadow: 0 0 15px var(--gold-glow);
+}
+
+
+footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-subtle);
+    text-align: center;
+    padding: 25px;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    margin-top: auto;
+}
+
+
+.page-container {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards; 
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+h1, h2 {
+    color: var(--gold-shine);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+
+.stellar-btn {
+    background: linear-gradient(135deg, var(--bg-card), #1a2535);
+    color: var(--gold-shine);
+    border: 1px solid var(--gold-accent);
+    padding: 15px 40px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--ease-bounce) 0.3s;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.stellar-btn:hover {
+    background: var(--gold-shine);
+    color: var(--bg-deep);
+    box-shadow: 0 0 25px var(--gold-glow);
+    transform: translateY(-3px);
+}
+
+
+.st-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    transition: all var(--trans-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.st-card::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.st-card:hover {
+    border-color: var(--gold-shine);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.st-card:hover::before {
+    opacity: 1;
+}
+
+.st-card h3 {
+    color: var(--text-bright);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.st-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-dim);
+}
